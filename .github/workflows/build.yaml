@@ -5,8 +5,8 @@ jobs:
   build:
     runs-on: windows-2019
     steps:
-      - name: Install Office
-        run: choco install office365business
+#      - name: Install Office
+#        run: choco install office365business
 
 #      - name: Activate Office
 #        working-directory: C:\Program Files (x86)\Microsoft Office\Office16
@@ -14,5 +14,14 @@ jobs:
 #        env:
 #          OFFICE_ACTIVATION_CODE: ${{secrets.OFFICE_ACTIVATION_CODE}} 
 
-      - name: Run Excel
-        run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
+      - uses: suisei-cn/actions-download-file@v1.0.1
+        name: Download Excel Addin
+        with:
+          url: "https://storage-cf-us.sharefile.com/Download/a1634be3-fbc9-4110-b558-f96dac2c0e39/fic0ccfa-bc1f-49a3-804f-5d9012fc3fb9.scenc?downloadId=dtfe489583cfdf4c01adc4d8a9832a244c&accountId=a1634be3-fbc9-4110-b558-f96dac2c0e39&correlationId=7Na7KEn94U6UW4KuG-dI6Q&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9zdG9yYWdlLWNmLXVzLnNoYXJlZmlsZS5jb20vRG93bmxvYWQvYTE2MzRiZTMtZmJjOS00MTEwLWI1NTgtZjk2ZGFjMmMwZTM5L2ZpYzBjY2ZhLWJjMWYtNDlhMy04MDRmLTVkOTAxMmZjM2ZiOS5zY2VuYz9kb3dubG9hZElkPWR0ZmU0ODk1ODNjZmRmNGMwMWFkYzRkOGE5ODMyYTI0NGMmYWNjb3VudElkPWExNjM0YmUzLWZiYzktNDExMC1iNTU4LWY5NmRhYzJjMGUzOSZjb3JyZWxhdGlvbklkPTdOYTdLRW45NFU2VVc0S3VHLWRJNlEiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2Njc2Njg1NjZ9fX1dfQo_&Expires=1667668566&Signature=pgECf2qeB0zoRxG2zxdYt6DIbG0XGr6cth0-DWISdoZOixKKwQ-3wWi30e42jJLkmWia~SOXcI4NTnIFUPFprDC8zgCaONqPbMMw-5NSlClwA31yx7BG4u5QztfBXb6KjpACOLOuWx~cgbcdvrZ7Xzi6X5HJMB3DmdZwb1tHM~s8CHvIZmSE1sR0a2fBxtF7kaqXsO3USmDK~XcWZDfU3LRKGHcyO5Dtxkm83bl0xaTeOyTgculdzsvflhU6pPyvtddxKBlXCuGyc9cHMCxEeBplSXbkJjFXPGQa5XFheQiy21Q3bkJIgbW~eaAgNVuFAriTb1iW4mL0EP96reD0SA__&Key-Pair-Id=K23BLG4YDA2WY2"
+          target: downloads # AppData/Roaming/Microsoft/Excel/XLSTART
+
+      - name: Dir
+        run: dir
+
+#      - name: Run Excel
+#        run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
