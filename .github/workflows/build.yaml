@@ -15,4 +15,4 @@ jobs:
 #          OFFICE_ACTIVATION_CODE: ${{secrets.OFFICE_ACTIVATION_CODE}} 
 
       - name: Run Excel
-        run: "C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE"
+        run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
