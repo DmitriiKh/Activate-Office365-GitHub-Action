@@ -21,7 +21,7 @@ jobs:
 #          target: downloads # AppData/Roaming/Microsoft/Excel/XLSTART
 
       - name: Dir
-        run: dir "C:\Users\runneradmin\AppData\Roaming"
+        run: dir "C:\Users\runneradmin\AppData\Roaming\Microsoft"
 
       - name: Run Excel
         run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
