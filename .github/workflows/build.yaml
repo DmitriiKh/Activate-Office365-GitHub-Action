@@ -6,7 +6,8 @@ jobs:
     runs-on: windows-2019
     steps:
       - name: Install Office
-        run: choco install office365business choco install office365business --forcex86 --params "'/productid:O365BusinessRetail /exclude:Access Groove Lync OneDrive OneNote Outlook Publisher Powerpoint Word /updates:FALSE /eula:FALSE'"
+#      - run: choco install office365business choco install office365business --forcex86 --params "'/productid:O365BusinessRetail /exclude:Access Groove Lync OneDrive OneNote Outlook Publisher Powerpoint Word /updates:FALSE /eula:FALSE'"
+      - run: choco install office365business --forcex86 --params "'/productid:O365HomePremRetail /exclude:Access Groove Lync OneDrive OneNote Outlook Publisher /language:fr-FR /updates:FALSE /eula:FALSE'"
 
 #      - name: Activate Office
 #        working-directory: C:\Program Files (x86)\Microsoft Office\Office16
