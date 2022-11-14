@@ -26,5 +26,8 @@ jobs:
       - name: Run Excel
         run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
 
+      - name: CD
+        run: cd c:\
+
       - name: Dir
-        run: dir "C:\Users\runneradmin\AppData\Roaming\Microsoft"
+        run: dir Excel /AD /s
