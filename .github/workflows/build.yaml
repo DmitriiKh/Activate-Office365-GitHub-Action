@@ -30,4 +30,5 @@ jobs:
         run: cd c:\
 
       - name: Dir
+        shell: cmd
         run: dir Excel /AD /s
