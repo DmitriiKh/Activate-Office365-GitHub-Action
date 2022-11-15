@@ -26,8 +26,8 @@ jobs:
       - name: Run Excel
         run: "\"C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE\""
 
-      - name: Sleep for 30 seconds
-        run: sleep 90s
+      - name: Sleep for 180 seconds
+        run: sleep 180s
         shell: bash
 
       - name: CD
